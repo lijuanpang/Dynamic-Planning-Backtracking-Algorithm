@@ -1,7 +1,12 @@
-function u=DecisFun(k,s,u)
-%决策函数
-if k==3
-    u=s;
-else
-    u=0:s;
-end
+
+function [u1,u2]=DecisFun(k,x1,x2)%在该阶段初对危险用户进行保留，但是保留成功与否的结果是反应在下阶段出的用户数量中的
+P1=0.5;
+P2=0.4;
+M=140;
+
+u1=0:1:min(7*x1,M);
+u2=0:1:min(7*x2,M);
+
+
+
+
